@@ -116,3 +116,22 @@ var employeeName; // Defines the variable name, no type or value until assigned 
 // Variable names are case sensitive, meaning firstName and FirstName are considered different variables
 // Use camel case: each word, except the first, starts with a capital letter
 // For example, var firstName;
+
+// 02.03.02 Calculating costs
+let price:number=5;
+const salesTax:number=0.13;
+let totalPrice:number=price+price*salesTax;
+console.log(totalPrice);
+
+price=25;
+totalPrice=price+price*salesTax
+console.log(totalPrice);
+
+// 02.03.03 Variable message
+let animal:string="owl";
+let reason:string="funny looking";
+console.log("My favourite animal is the", animal, "because they are", reason);
+
+animal="cat";
+reason="cute";
+console.log("My favourite animal is the", animal, "because they are", reason);
