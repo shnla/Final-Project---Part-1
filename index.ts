@@ -135,3 +135,5 @@ console.log("My favourite animal is the", animal, "because they are", reason);
 animal="cat";
 reason="cute";
 console.log("My favourite animal is the", animal, "because they are", reason);
+
+// Exercises
