@@ -114,6 +114,42 @@ var employeeName; // Defines the variable name, no type or value until assigned 
 // Use camel case: each word, except the first, starts with a capital letter
 // For example, var firstName;
 
+// Exercise Problems
+// 1. Print "The quick brown fox jumps over the lazy dog". Store the message in a variable.
+// 2. Find the product of 294234 and 3940. Store any data into a variable. Print a final answer. Then, change the first number into 94532 and repeat.
+// 3. Calculate the area of a circle with the following radius: i) 5 cm ii) 14 cm. The formula is Area = Pi x radius squared. Keep any measurements and data in a variable. Print a final message like "The area of the circle with a xx cm radius is xyz".
+
+// Answers
+// 1.
+const message:string="The quick brown fox jumps over the lazy dog";
+console.log(message);
+// Output: The quick brown fox jumps over the lazy dog
+
+// 2.
+let num1:number=294234;
+let num2:number=3940;
+let product:number=num1*num2;
+console.log(num1, "x", num2, "=", product);
+num1=94532;
+product=num1*num2;
+console.log(num1, "x", num2, "=", product);
+// Output:
+// 294234 x 3940 = 1159281960
+// 94532 x 3940 = 372456080
+
+// 3.
+const pi:number=3.14;
+let radius:number=5;
+let area:number=pi*radius**2
+console.log("The area of the circle with a radius of", radius, "is", area)
+radius = 14
+area = pi*radius**2
+console.log("The area of the circle with a radius of", radius, "is", area)
+// Output:
+// The area of the circle with a radius of 5 is 78.5
+// The area of the circle with a radius of 14 is 615.44
+
+
 // 02.03.02 Calculating costs
 let price:number=5;
 const salesTax:number=0.13;
