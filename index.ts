@@ -70,13 +70,11 @@ denoted by /* */
 // Const variables have the same scope as let variables, meaning block scope
 // Use for values that you know will never change, for example: const PI:number=3.14;
 
-
-
 // Scope Example
 var globalVar="..."; // accessible everywhere
 let globalLet="..."; // accessible everywhere
 
-function someFn() {//////////////////////////////////////////////////////////////////
+function someFn() {
   if (true)
   {////////////////////////////////////////////////////////////
     var localVar="...";
@@ -84,11 +82,10 @@ function someFn() {/////////////////////////////////////////////////////////////
     let localLet="...";
     console.log(localLet); // ok, accessible within code block
   }////////////////////////////////////////////////////////////
-
+  
   console.log(localVar); //ok, accessible within the function
   console.log(localLet); // error, outside of code block
-  
-}////////////////////////////////////////////////////////////////////////////////////
+}
 console.log(localVar); //error, outside of function
 console.log(globalVar); //ok
 
