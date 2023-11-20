@@ -17,4 +17,11 @@ console.log("You entered", userInput);
 console.log(typeof userInput);
 
 // Floor Division
-console.log
+let floorDivision = Math.floor(3/2);
+
+// Modulos
+let modulos = 3%2
+
+// Math Functions
+Math.max(1,57,2,3) // returns the highest number value in a set of numbers
+Math.min(1,57,2,3)
