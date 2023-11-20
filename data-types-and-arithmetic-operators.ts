@@ -48,6 +48,13 @@ let someValue: any = 'This is a random string';
 let knownString = <string> someValue; // string type casted with <>
 let sameThing = someValue as string; // string type casted with 'as' operator
 
+// Type Casting using built-in functions
+//.toString() function converts numbers to string
+// parseFloat() function converts string to number
+let someNumber: number = 1
+let asString = someNumber.toString(); // string
+let backToNumber = parseFloat(asString); // number
+
 // TypeScript Operators
 
 // Arithmetic Operators
