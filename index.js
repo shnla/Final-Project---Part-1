@@ -11,3 +11,15 @@ function printTotalPrice() {
 // type: an event type to listen for
 // listener: function that will respond to the event
 printBtn.addEventListener("click", printTotalPrice);
+var firstNumber = document.getElementById("number1");
+var secondNumber = document.getElementById("number2");
+var calculateBtn = document.getElementById("calculateButton");
+var outputSum = document.getElementById("sum");
+var outputDifference = document.getElementById("difference");
+function printOutputs() {
+    var theSum = parseFloat(firstNumber.value) + parseFloat(secondNumber.value);
+    var theDifference = parseFloat(secondNumber.value) - parseFloat(firstNumber.value);
+    outputSum.textContent = theSum.toString();
+    outputDifference.textContent = theDifference.toString();
+}
+calculateBtn.addEventListener("click", printOutputs);
