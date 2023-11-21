@@ -29,3 +29,18 @@ function printOutputs(): void{
 }
 
 calculateBtn.addEventListener("click", printOutputs);
+
+
+const firstScore = document.getElementById("score1") as HTMLInputElement;
+const secondScore = document.getElementById("score2") as HTMLInputElement;
+const thirdScore = document.getElementById("score3") as HTMLInputElement;
+const playerName = document.getElementById("name") as HTMLInputElement;
+const averageBtn = document.getElementById("averageButton") as HTMLButtonElement;
+const averageCalculated = document.getElementById("average") as HTMLOutputElement;
+
+function printAverageScore(): void{
+    const averageScore = (parseFloat(firstScore.value) + parseFloat(secondScore.value) + parseFloat(thirdScore.value))/3;
+    averageCalculated.textContent = averageScore.toString();
+
+}
+averageBtn.addEventListener("click", printAverageScore);
