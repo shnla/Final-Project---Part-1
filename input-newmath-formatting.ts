@@ -1,13 +1,25 @@
 // Input
-// Unlike Python, TypeScript does not have a built-in function for getting user input. However, as a superset of JavaScript, we will be using in conjunction JavaScript's prompt function to handle user input
-// Example for doing this in VS Code:
-// npm install prompt-sync (terminal)
+// Unlike Python, TypeScript does not have a built-in function for getting user input. There are many different ways we can go about this, depending on the environmennt in which your code is running.
+
+// User Input using TypeScript and HTML (VS Code)
+// Create an html file
+// Write your html code, including input and output fields
+// Create a TypeScript file and import all id elements from the html file by creating variables to store them using "document.getElementById(...)"
+// In your TypeScript file, create a function that will display the desired output using outputVariable.textContent = output
+// Terminal: tsc fileName.ts (this will create a JavaScript file of your TypeScript file)
+// Html file: <script src="fileName.js"></script>
+
+// *see index.html, index.js, index.ts
+
+
+// User Input using Prompt-Sync (VS Code)
+// Terminal: npm install prompt-sync
 import * as promptSync from 'prompt-sync'
 const prompt = promptSync();
 const userInput = prompt("Some prompt");
 console.log("You entered", userInput);
-// tsc ./path/way/fileName.ts (terminal)
-// node ./path/way/fileName.js (terminal)
+// Terminal: tsc ./path/way/fileName.ts
+// Terminal: node ./path/way/fileName.js
 
 // in case of error:
 // npx tsc (terminal)
@@ -87,3 +99,34 @@ console.log(new Intl.NumberFormat("en-GB", {
 // \\  - single backwards slash
 // \/  - single forwards slash
 
+// Practice
+// 1. Write the output for the following without running it
+// a) Math.floor(-43.349)
+// b) Math.pow(169,0.5)
+// c) Math.ceil(-342.000000000001)
+// 2. Find the price after 17% tax of an item costing 19.99 euros and print a final statement using formatting.
+// 3. Use the variables to print the following sentence: "Hello, my name is Jane and I'm 17 years old. Under 50% is a fail."
+  // const myName = "Jane";
+  // const age = 17;
+  // const grade = 50.11232;
+
+
+// Solutions
+// 1.a)-44 b)13 c)-342
+// 2.
+const cost = 19.99;
+const tax = 0.17;
+const finalPrice = cost + cost*tax;
+console.log(new Intl.NumberFormat("de-DE", { 
+  style: "currency",
+  currency: "EUR" 
+}).format(number)); 
+
+// 3.
+const myName = "Jane";
+const age = 17;
+const grade = 50/100;
+const percent = new Intl.NumberFormat("en-GB", { 
+  style: "percent",
+}).format(grade);
+console.log(`Hello, my name is ${myName} and I'm ${age} years old. Under ${percent} is a fail.`);
