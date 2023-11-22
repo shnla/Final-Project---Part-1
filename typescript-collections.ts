@@ -75,3 +75,45 @@ mySet.entries(); // returns an iterable object similar to a map. each value's ke
 mySet.keys(); // returns an iterable object of all the values
 mySet.values(); // does the same as the above. basically the keys in a set are equal to its values
 mySet.has("something") // returns true if the "something" is in the set, false if not
+
+// Practice Problems
+// 1. Filter the odd numbers in a given array and print the odd array to console.
+// 2. Find the middle element of an array and replace it with "0". If there isn't a middle, insert it so that it's in the middle.
+// 3. Find the average of an array of numbers to two decimal places.
+
+
+// Solutions 
+// 1.
+const numbers = []; // list full of numbers
+const evenNumbers = [];
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+        evenNumbers.push(numbers[i]);
+    }
+}
+console.log(evenNumbers); 
+
+// 2. 
+const arr = [];
+let index = Math.floor(arr.length/2);
+if (arr.length%2 === 0) {
+  arr.splice(index,0,0);
+}
+else {
+  arr.splice(index,1,0);
+}
+console.log(arr);
+
+// 3. 
+const numbers = []
+if (numbers.length === 0) {
+  console.log("empty list"); // Avoid division by zero for an empty array
+}
+else {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  let average = sum / numbers.length;
+  console.log(average.toFixed(2))
+}
