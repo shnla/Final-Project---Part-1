@@ -143,3 +143,69 @@ console.log(Math.floor(2022/10) % 10);
 console.log(Math.floor(1796/10) % 10);
 // c) 5
 console.log(Math.floor(56/10) % 10);
+
+// 02.05.03
+// HTML FILE
+<!DOCTYPE html>
+
+<html>
+    <title> 02.05.03 </title>
+
+    <body>
+        <p> Enter an integer </p>
+        <input type="number" id="integer">
+        <button id="printButton"> Calculate</button>
+        <h3 id = "message"> </h3>
+        <script src="./index.js"></script>
+    </body>
+</html>
+
+// TYPESCRIPT FILE
+  const integer = document.getElementById("integer") as HTMLInputElement;
+  const printButton = document.getElementById("printButton") as HTMLButtonElement;
+  const message = document.getElementById("message") as HTMLOutputElement;
+
+  function dissect(): void{
+      const number = parseFloat(integer.value);
+      const thousands = Math.floor(number/1000);
+      const thousand = thousands*1000;
+      const hundreds = Math.floor((number-thousand)/100);
+      const hundred = thousand + hundreds*100;
+      const tens = Math.floor((number-hundred)/10);
+      const ten = hundred + tens*10;
+      const ones = number-ten;
+    
+      message.innerHTML = number.toString() + " returns " + thousands.toString() + " thousands, " + hundreds.toString() + " hundreds, " + " and " + ones.toString() + " ones."
+
+  }
+  printButton.addEventListener("click", dissect);
+
+// 02.05.04
+// HTML FILE
+<!DOCTYPE html>
+
+<html>
+    <title> 02.05.04 </title>
+
+    <body>
+        <p> Enter a length </p>
+        <input type="number" id="length">
+        <button id="printButton"> Calculate</button>
+        <h3 id = "message"> </h3>
+        <script src="./index.js"></script>
+    </body>
+</html>
+
+// TYPESCRIPT FILE
+  const length = document.getElementById("length") as HTMLInputElement;
+  const printButton = document.getElementById("printButton") as HTMLButtonElement;
+  const message = document.getElementById("message") as HTMLOutputElement;
+
+  function calculatePieces(): void{
+      const materialLength = parseFloat(length.value);
+      const pieces = Math.floor(materialLength/3);
+      const excess = (materialLength % 3)*100;
+      message.innerHTML = materialLength.toString() + " results in " + pieces.toString() + " 3-meter lengths, with " + excess.toString() + " cm excess.";
+
+  }
+  printButton.addEventListener("click", calculatePieces);
