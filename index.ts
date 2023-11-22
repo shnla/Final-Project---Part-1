@@ -43,8 +43,22 @@ function calculateAverage(): void{
     const scoreTwo = parseFloat(secondScore.value);
     const scoreThree = parseFloat(thirdScore.value);
     const average = (scoreOne+scoreTwo+scoreThree)/3;
-    message.innerHTML = playerName.value + "scored on average" + average.toFixed(2) + "goals per round";
+    message.innerHTML = playerName.value + " scored on average " + average.toFixed(2) + " goals per round.";
 
 }
 
 averageBtn.addEventListener("click", calculateAverage);
+
+const otherBase = document.getElementById("nonBaseTen") as HTMLInputElement;
+const otherBaseNumber = document.getElementById("otherBaseNumber") as HTMLInputElement;
+const convertBtn = document.getElementById("convert") as HTMLButtonElement;
+const denary = document.getElementById("denary") as HTMLOutputElement;
+
+function convertDenary(): void{
+    const base = parseFloat(otherBase.value);
+    const denaryNumber = parseInt(otherBaseNumber.value, base);
+    denary.innerHTML = "Number (denary) " + denaryNumber.toString();
+
+}
+
+convertBtn.addEventListener("click", convertDenary);

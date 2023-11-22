@@ -28,9 +28,12 @@ var secondScore = document.getElementById("score2");
 var thirdScore = document.getElementById("score3");
 var playerName = document.getElementById("name");
 var averageBtn = document.getElementById("averageButton");
-var averageCalculated = document.getElementById("average");
-function printAverageScore() {
-    var averageScore = (parseFloat(firstScore.value) + parseFloat(secondScore.value) + parseFloat(thirdScore.value)) / 3;
-    averageCalculated.textContent = averageScore.toString();
+var message = document.getElementById("message");
+function calculateAverage() {
+    var scoreOne = parseFloat(firstScore.value);
+    var scoreTwo = parseFloat(secondScore.value);
+    var scoreThree = parseFloat(thirdScore.value);
+    var average = (scoreOne + scoreTwo + scoreThree) / 3;
+    message.innerHTML = playerName.value + "scored on average" + average.toFixed(2) + "goals per round";
 }
-averageBtn.addEventListener("click", printAverageScore);
+averageBtn.addEventListener("click", calculateAverage);
