@@ -36,11 +36,15 @@ const secondScore = document.getElementById("score2") as HTMLInputElement;
 const thirdScore = document.getElementById("score3") as HTMLInputElement;
 const playerName = document.getElementById("name") as HTMLInputElement;
 const averageBtn = document.getElementById("averageButton") as HTMLButtonElement;
-const averageCalculated = document.getElementById("average") as HTMLOutputElement;
+const message = document.getElementById("message") as HTMLOutputElement;
 
-function printAverageScore(): void{
-    const averageScore = (parseFloat(firstScore.value) + parseFloat(secondScore.value) + parseFloat(thirdScore.value))/3;
-    averageCalculated.textContent = averageScore.toString();
+function calculateAverage(): void{
+    const scoreOne = parseFloat(firstScore.value);
+    const scoreTwo = parseFloat(secondScore.value);
+    const scoreThree = parseFloat(thirdScore.value);
+    const average = (scoreOne+scoreTwo+scoreThree)/3;
+    message.innerHTML = playerName.value + "scored on average" + average.toFixed(2) + "goals per round";
 
 }
-averageBtn.addEventListener("click", printAverageScore);
+
+averageBtn.addEventListener("click", calculateAverage);

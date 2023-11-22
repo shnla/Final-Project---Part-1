@@ -23,3 +23,14 @@ function printOutputs() {
     outputDifference.textContent = theDifference.toString();
 }
 calculateBtn.addEventListener("click", printOutputs);
+var firstScore = document.getElementById("score1");
+var secondScore = document.getElementById("score2");
+var thirdScore = document.getElementById("score3");
+var playerName = document.getElementById("name");
+var averageBtn = document.getElementById("averageButton");
+var averageCalculated = document.getElementById("average");
+function printAverageScore() {
+    var averageScore = (parseFloat(firstScore.value) + parseFloat(secondScore.value) + parseFloat(thirdScore.value)) / 3;
+    averageCalculated.textContent = averageScore.toString();
+}
+averageBtn.addEventListener("click", printAverageScore);
