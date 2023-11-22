@@ -67,3 +67,33 @@ for (let i=0; i<4; i++) {
 // 1,2,3 < Outside loop iteration #2
 // 1,2,3 < Outside loop iteration #3
 // 1,2,3 < Outside loop iteration #4
+
+// Practice Problems
+// 1. Print the digits of the number 43589. Use a for of loop.
+// 2. Find the sum of the digits in 32941.
+// 3. Print the 9 times table using a loop.
+
+
+// Solutions
+// 1. 
+
+const num = '43589';
+for (var digit of num) {
+  console.log(digit);
+}
+
+// 2.
+const num = '32941';
+var sum = 0;
+for (var digit of num) {
+  sum = sum+parseFloat(digit);
+}
+console.log(sum);
+
+// 3.
+const num = 9;
+for (let i=1; i<=9; i++) {
+  for (let j=1; j<=i; j++) {
+    console.log(`${i} x ${j} = ${i*j}`);
+  }
+}
