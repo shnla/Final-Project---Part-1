@@ -119,3 +119,27 @@ const percent = new Intl.NumberFormat("en-GB", {
   style: "percent",
 }).format(grade);
 console.log(`Hello, my name is ${myName} and I'm ${age} years old. Under ${percent} is a fail.`);
+
+// 02.05.01
+// a) 8
+console.log(Math.floor(10/5) * 4);
+// b) 8
+console.log(Math.floor(10/2) + 3);
+// c) 4
+console.log(6 % 3 + 4);
+// d) 6
+console.log(12 % 5 * 3);
+// e) 12
+console.log(12 % (5*3));
+// f) 6
+console.log((12 % 5)*3);
+// g) 8
+console.log(10/5*4);
+
+//02.05.02
+// a) 2
+console.log(Math.floor(2022/10) % 10);
+// b) 9
+console.log(Math.floor(1796/10) % 10);
+// c) 5
+console.log(Math.floor(56/10) % 10);
