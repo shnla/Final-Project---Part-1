@@ -2,28 +2,17 @@
 // Unlike Python, TypeScript does not have a built-in function for getting user input. There are many different ways we can go about this, depending on the environmennt in which your code is running.
 
 // User Input using TypeScript and HTML (VS Code)
-// Create an html file
-// Write your html code, including input and output fields
-// Create a TypeScript file and import all id elements from the html file by creating variables to store them using "document.getElementById(...)"
-// In your TypeScript file, create a function that will display the desired output using outputVariable.textContent = output
-// Terminal: tsc fileName.ts (this will create a JavaScript file of your TypeScript file)
-// Html file: <script src="fileName.js"></script>
+// HTML is not a programming language because it does not allow for the use of fundamental coding functions such as variables, if statements, data typing, etc. HTML is a markup coding language that is used to design the appearance and presentation of code in a webpage format.
+
+// 1. Create an html file
+// 2. Write your html code, including input and output fields
+// 3. Create a TypeScript file and import all id elements from the html file by creating variables to store them using "document.getElementById(...)"
+// 4. In your TypeScript file, create a function that will display the desired output using outputVariable.textContent = output
+// 5. Use buttonVariableName.addEventListener("click", functionName); this will run the function when the button is clicked
+// 6. In the terminal: tsc fileName.ts (this will create/update a JavaScript file of your TypeScript code)
+// 7. Html file: <script src="fileName.js"></script>
 
 // *see index.html, index.js, index.ts
-
-
-// User Input using Prompt-Sync (VS Code)
-// Terminal: npm install prompt-sync
-import * as promptSync from 'prompt-sync'
-const prompt = promptSync();
-const userInput = prompt("Some prompt");
-console.log("You entered", userInput);
-// Terminal: tsc ./path/way/fileName.ts
-// Terminal: node ./path/way/fileName.js
-
-// in case of error:
-// npx tsc (terminal)
-// node dist/fileName.js
 
 // Type
 console.log(typeof userInput);
