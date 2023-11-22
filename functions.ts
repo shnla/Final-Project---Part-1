@@ -65,3 +65,25 @@ function recursion(num:number) {
   return result;
 }
 recursion(5);
+
+// Exercise Problems
+// 1. Write a TypeScript function that takes a number as a parameter and returns the square of that number.
+// 2. Write a TypeScript function that takes a number as a parameter and returns true if the number is positive and false otherwise.
+// 3. Write a TypeScript function that takes two numbers as parameters and returns the average of those numbers.
+
+
+// Solutions
+//1.
+function square(num:number) {
+  return num**2;
+}
+
+// 2.
+function checkPositive(num:number) {
+  return num>0;
+}
+
+// 3.
+function average(num1:number, num2:number) {
+  return (num1+num2)/2;
+}
