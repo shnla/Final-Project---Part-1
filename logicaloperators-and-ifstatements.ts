@@ -73,6 +73,16 @@ else {
   console.log("more than 1000")
 }
 }
+// Practice
+// Write a TypeScript code that prints true if a number is even and false otherwise. Use an if statement to check for evenness.
+
+if (number%5 === 0) {
+  console.log("true");
+}
+else {
+  console.log("false");
+}
+
 // 03.01.01
 let running = true;
 if (running) {
