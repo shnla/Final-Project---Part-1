@@ -73,3 +73,19 @@ else {
   console.log("more than 1000")
 }
 }
+// 03.01.01
+let running = true;
+if (running) {
+  console.log("Buy a ticket");
+}
+else {
+  console.log("LEAVE");
+}
+
+let running = false;
+if (running) {
+  console.log("Buy a ticket");
+}
+else {
+  console.log("LEAVE");
+}
