@@ -74,28 +74,45 @@ else {
 }
 }
 // Practice
-// Write a TypeScript code that prints true if a number is even and false otherwise. Use an if statement to check for evenness.
+// 1. Write a TypeScript code that prints true if a number is even and false otherwise. Use an if statement to check for evenness.
+// 2. Write a TypeScript program that simulates a traffic light system. Declare a variable representing the current colour of the traffic light. Use if statements to display appropriate messages for each colour.
+// 3. Write a TypeScript program that checks if a given number is a perfect square. If it’s not a perfect square, indicate so and find the nearest one. State the base.
 
-if (number%5 === 0) {
+// 1.
+if (number%2 === 0) {
   console.log("true");
 }
 else {
   console.log("false");
 }
 
-// 03.01.01
-let running = true;
-if (running) {
-  console.log("Buy a ticket");
+// 2.
+let light = "red";
+
+if (light == "red") {
+  console.log("Red light, stop!");
 }
-else {
-  console.log("LEAVE");
+else if (light == "yellow") {
+  console.log("Yellow light, slow down!");
+}
+else if (light == "green") {
+  console.log("Green light, go!");
 }
 
-let running = false;
-if (running) {
-  console.log("Buy a ticket");
+// 3.
+const number = 70;
+let root = Math.sqrt(number);
+
+if (root % 1 != 0) {
+  let lowerSquare = Math.floor(root)**2;
+  let higherSquare = Math.ceil(root)**2;
+  let nearestSquare = (number-lowerSquare < higherSquare-number) ? lowerSquare:higherSquare;
+  console.log(`Not a perfect square\nNearest perfect square: ${nearestSquare}\nBase: ${Math.sqrt(nearestSquare)}`);
 }
 else {
-  console.log("LEAVE");
+  console.log(`Perfect square\nBase: ${root}`);
 }
+
+
+
+
