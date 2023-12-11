@@ -17,7 +17,7 @@
 
 // Else
 // when the if statement conditions are not met, code indented under the else key word will run
-// must be run with at least an if statement (cannot be stand alone). May run with or without the else if statement. There can only be one "else if" per "if"
+// must be run with at least an if statement (cannot be stand alone). May run with or without the else if statement. There can only be one "else" per "if"
 
 // Else If
 // "else if" keyword checks its condition if the previous condition was not met
